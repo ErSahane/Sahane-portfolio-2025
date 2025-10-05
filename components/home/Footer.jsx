@@ -106,7 +106,7 @@ export default function Footer() {
 								href="https://github.com/ErSahane"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-white"
+								// className="hover:text-white"
 							>
 								<FaGithub />
 							</Link>
@@ -116,7 +116,7 @@ export default function Footer() {
 								href="https://www.linkedin.com/in/sahane-alam"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="hover:text-white"
+								// className="hover:text-white"
 							>
 								<FaLinkedin />
 							</Link>
@@ -125,7 +125,7 @@ export default function Footer() {
 						<li>
 							<Link
 								href="mailto:sahanealam.dev@gmail.com"
-								className="hover:text-white"
+								// className="hover:text-white"
 							>
 								<FaEnvelope />
 							</Link>
