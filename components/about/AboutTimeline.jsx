@@ -25,15 +25,26 @@ export default function AboutTimeline() {
 			<ul className="space-y-4 border-l-2 border-primary pl-4">
 				<motion.li variants={fadeUp}>
 					<div className="text-blue-500 font-medium">
-						2025 (Expected)
+						2021 (Expected)
 					</div>
 					<p className="text-gray-700 dark:text-gray-300">
 						Graduating with BCA in Computer Science from
 						IFTM University Moradabad
 					</p>
+					<div className="text-blue-500 font-medium">
+						2023 (Expected)
+					</div>
 					<p className="text-gray-700 dark:text-gray-300">
 						Post Graduating with MCA in Computer Science from
 						IFTM University Moradabad
+					</p>
+				</motion.li>
+				
+				<motion.li variants={fadeUp}>
+					<div className="text-blue-500 font-medium">2023</div>
+					<p className="text-gray-700 dark:text-gray-300">
+						Started learning full-stack development and built
+						projects with Pyhton, Django, MERN, Next.js, Appwrite
 					</p>
 				</motion.li>
 				<motion.li variants={fadeUp}>
@@ -41,13 +52,6 @@ export default function AboutTimeline() {
 					<p className="text-gray-700 dark:text-gray-300">
 						Built CelebSkyMedia, a complete influencer marketing
 						site
-					</p>
-				</motion.li>
-				<motion.li variants={fadeUp}>
-					<div className="text-blue-500 font-medium">2023</div>
-					<p className="text-gray-700 dark:text-gray-300">
-						Started learning full-stack development and built
-						projects with Pyhton, Django, MERN, Next.js, Appwrite
 					</p>
 				</motion.li>
 			</ul>

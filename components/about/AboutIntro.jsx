@@ -29,7 +29,7 @@ export default function AboutIntro() {
 			<motion.div variants={fadeUp}>
 				<h1 className="text-3xl font-bold mb-2">Hi, I'm Sahane Alam 👋</h1>
 				<p className="text-gray-600 dark:text-gray-300 max-w-xl mb-4">
-					I'm a full-stack web developer passionate about building
+					I'm a full-stack web developer, web designer, Data Analyst passionate about building
 					scalable, responsive, and intuitive web applications. I
 					specialize in the Python, Django, MERN stack, React, Next.js, and Tailwind
 					CSS.
