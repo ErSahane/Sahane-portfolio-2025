@@ -57,7 +57,7 @@ const Hero = () => {
 						width={300}
 						height={300}
 						alt="Profile picture"
-						src="https://res.cloudinary.com/dxbgo7zzv/image/upload/v1759644254/WhatsApp_Image_2025-10-04_at_13.34.05_f465864e_orxk5j.jpg"
+						src="https://res.cloudinary.com/dxbgo7zzv/image/upload/v1759659538/WhatsApp_Image_2025-10-05_at_15.46.45_2d1d170a_kmjj2a.jpg"
 						priority
 					/>
 				</motion.div>

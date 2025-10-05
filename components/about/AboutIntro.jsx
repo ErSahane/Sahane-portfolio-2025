@@ -21,7 +21,7 @@ export default function AboutIntro() {
 			variants={fadeUp}
 		>
 			<motion.img
-				src="https://res.cloudinary.com/dxbgo7zzv/image/upload/v1759649113/WhatsApp_Image_2025-10-05_at_12.54.09_f3ca7c9b_vmkb3d.jpg"
+				src="https://res.cloudinary.com/dxbgo7zzv/image/upload/v1759659538/WhatsApp_Image_2025-10-05_at_15.46.46_7f8764fa_il152j.jpg"
 				alt="Kairo Sen"
 				className="w-40 h-40 rounded-full object-cover shadow-lg"
 				variants={fadeUp}
