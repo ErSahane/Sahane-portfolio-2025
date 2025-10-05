@@ -5,6 +5,7 @@ import { FiMail, FiUser, FiMessageCircle } from "react-icons/fi";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import { toast } from "sonner"; // ✅ sonner import
 
 export default function ContactForm() {
 	const [formData, setFormData] = useState({
@@ -14,10 +15,9 @@ export default function ContactForm() {
 	});
 
 	const [isVisible, setIsVisible] = useState(false);
-	const [status, setStatus] = useState(""); // new state to show success/error message
+	const [status, setStatus] = useState(""); // success/error/sending state
 
 	useEffect(() => {
-		// Trigger animation on mount
 		setIsVisible(true);
 	}, []);
 
@@ -25,10 +25,11 @@ export default function ContactForm() {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
 	};
 
-	// ✅ Backend API call
+	// ✅ Backend API call with Sonner toast
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setStatus("sending");
+		toast.loading("Sending your message... ✉️");
 
 		try {
 			const res = await fetch("/api/contact", {
@@ -38,18 +39,21 @@ export default function ContactForm() {
 			});
 
 			const data = await res.json();
+			toast.dismiss(); // remove loading toast
+
 			if (res.ok && data.success) {
 				setStatus("success");
-				alert("✅ Message sent successfully!");
+				toast.success("✅ Message sent successfully!");
 				setFormData({ name: "", email: "", message: "" });
 			} else {
 				setStatus("error");
-				alert("❌ Failed to send message, please try again!");
+				toast.error("❌ Failed to send message. Please try again!");
 			}
 		} catch (error) {
 			console.error("Error:", error);
 			setStatus("error");
-			alert("⚠️ Server error, please try again later!");
+			toast.dismiss();
+			toast.error("⚠️ Server error. Please try again later!");
 		}
 	};
 
@@ -114,14 +118,6 @@ export default function ContactForm() {
 			>
 				{status === "sending" ? "Sending..." : "Send Message"}
 			</Button>
-
-			{/* Status message */}
-			{status === "success" && (
-				<p className="text-green-600 text-center">Your message has been sent successfully!</p>
-			)}
-			{status === "error" && (
-				<p className="text-red-600 text-center">Something went wrong. Please try again.</p>
-			)}
 		</form>
 	);
 }
