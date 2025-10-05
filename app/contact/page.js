@@ -9,5 +9,5 @@ const Contact = () => {
 
 
 export default function ContactPage() {
-  return <ContactForm />;
+  return <div className="py-20"> <ContactForm /></div>
 }
